@@ -1,26 +1,37 @@
-# IBM Data Science Capstone Project - SpaceX
+# Building a Chatbot with Python
 
 ## Introduction
 
-In this capstone, we will predict if the Falcon 9 first stage will land successfully. SpaceX advertises Falcon 9 rocket launches on its website, with a cost of 62 million dollars; other providers cost upward of 165 million dollars each, much of the savings is because SpaceX can reuse the first stage. Therefore if we can determine if the first stage will land, we can determine the cost of a launch. This information can be used if an alternate company wants to bid against SpaceX for a rocket launch. 
+Do you remember the last time you spoke to a customer service associate on call or via chat for an incorrect item delivered to you from Amazon, Flipkart, or Walmart? Most likely you would have had a conversation with a chatbot instead of a customer service agent. Gartner estimates that 85% of customer interactions will be handled by chatbots by 2022. So what exactly is a chatbot? How can you build an intelligent chatbot using Python? rocket launch. 
 
-This capstone project course will give you a taste of what data scientists go through in real life when working with real datasets. You will assume the role of a Data Scientist working for a startup intending to compete with SpaceX, and in the process follow the Data Science methodology involving [data collection](https://github.com/chuksoo/IBM-Data-Science-Capstone-SpaceX/blob/main/Data%20Collection%20API.ipynb), [data wrangling](https://github.com/chuksoo/IBM-Data-Science-Capstone-SpaceX/blob/main/Data%20Wrangling.ipynb), [exploratory data analysis](https://github.com/chuksoo/IBM-Data-Science-Capstone-SpaceX/blob/main/EDA%20with%20SQL.ipynb), [data visualization](https://github.com/chuksoo/IBM-Data-Science-Capstone-SpaceX/blob/main/EDA%20with%20Data%20Visualization.ipynb), [model development](https://github.com/chuksoo/IBM-Data-Science-Capstone-SpaceX/blob/main/Machine%20Learning%20Prediction.ipynb), [model evaluation](https://github.com/chuksoo/IBM-Data-Science-Capstone-SpaceX/blob/main/Machine%20Learning%20Prediction.ipynb), and [reporting](https://github.com/chuksoo/IBM-Data-Science-Capstone-SpaceX/blob/main/Winning%20Space%20Race%20with%20Data%20Science.pdf) your results to stakeholders. You are tasked with predicting if the first stage of the SpaceX Falcon 9 rocket will land successfully. 
+## What is a Chatbot? 
 
-## Business Problem
-SpaceX advertises Falcon 9 rocket launches on its website, with a cost of 62 million dollars; other providers cost upward of 165 million dollars each, much of the savings is because SpaceX can reuse the first stage. Therefore if you can accurately predict the likelihood of the first stage rocket landing successfully, you can determine the cost of a launch. With the help of your Data Science findings and models, the competing startup you have been hired by can make more informed bids against SpaceX for a rocket launch. 
+A chatbot is an AI-based digital assistant that can understand human capabilities and simulate human conversations in natural language to give prompt answers to their questions just like a real human would. Chatbots help businesses increase their operational efficiency by automating customer requests.
 
-## Objective
-- To apply data science toolkit and machine learning in order to accurately predict the likelihood of the first stage rocket landing successfully, and thus determine the cost of a launch.
-- Explore the data in order to obtain more insight from the data.
+## How does a Chatbot work?
+![image](https://user-images.githubusercontent.com/25245195/181879027-5e504599-3ad8-48c7-812a-29c9866e50e8.png)
 
-## Business metric
-Classification accuracy - number of correct prediction divided by the total number of prediction defined as:
-$$Accuracy = \frac{TP+TN}{TP+FP+TN+FN}$$
+The most important task of a chatbot is to analyze and understand the intent of a customer request to extract relevant entities. The bot then delivers an appropriate response to the user based on the analysis. Natural language processing plays a vital role in text analytics through chatbots making the interaction between the computer and human feel like a real human conversation. Every chatbot works by adopting the following three classification methods-
 
-![Confusion matrix](https://github.com/chuksoo/IBM-Data-Science-Capstone-SpaceX/blob/main/Plots/Confusion%20matrix.PNG)
+Pattern Matching – Makes use of pattern matches to group the text and produce a response
 
-## Deliverables
-- Accurate predictive algorithms
-- Business case report to stakeholders
+Natural Language Understanding (NLU) – The process of converting textual information into a structured data format that a machine can understand.
+
+Natural Language Generation (NLG) – The process of transforming the structured data into text.
+
+Get FREE Access to Machine Learning Example Codes for Data Cleaning, Data Munging, and Data Visualization
+
+## How to build your own chatbot?
+In this data science project, you will use a leading and powerful Python library NLTK (Natural Language Toolkit) to work with text data.
+
+Import the required data science libraries and load the data.
+
+Use various pre-processing techniques like Tokenization and Lemmatization to pre-process the textual data.
+
+Create training and test data.
+
+Create a simple set of rules to train the chatbot.
+
+Yay! It’s time to interact with your chatbot. 
 
 
