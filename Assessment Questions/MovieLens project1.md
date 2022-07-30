@@ -12,3 +12,13 @@ The challenge is not so easy given that there are many different type of biases 
 
 
 
+
+
+## Solution Link **[Please try to solve the assessment yourself. If you are stuck at some point, the take a look at this link.]**
+
+
+
+##Enjoy
+
+
+
