@@ -8,9 +8,12 @@
 
 Get the number of rows, columns, datatype and summary statistics of each column of the Cars93 dataset. Also get the numpy array and list equivalent of the dataframe.
 
+# Input
+
+df = pd.read_csv('https://raw.githubusercontent.com/selva86/datasets/master/Cars93_miss.csv')
 
 
-## ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+## --------------------------------------------------------------------------------------------
 
 
 # Capstone 2
@@ -21,10 +24,12 @@ Get the number of rows, columns, datatype and summary statistics of each column 
 
 In df, use apply method to replace the missing values in Min.Price with the column’s mean and those in Max.Price with the column’s median.
 
+# Input
+
+df = pd.read_csv('https://raw.githubusercontent.com/selva86/datasets/master/Cars93_miss.csv')
 
 
-
-## ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+## --------------------------------------------------------------------------------------------
 
 
 # Capstone 3
