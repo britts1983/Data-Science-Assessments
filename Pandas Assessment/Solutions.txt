@@ -1,0 +1,136 @@
+1. How to import pandas and check the version?
+
+	import numpy as np  # optional
+	import pandas as pd
+	print(pd.__version__)
+	print(pd.show_versions(as_json=True))
+	0.20.3
+	{'system': {'commit': None}, 'dependencies': {'pandas': '0.20.3', 'pytest': '3.2.1', 'pip': '9.0.1', 'setuptools': '36.5.0.post20170921',
+	 'Cython': '0.26.1', 'numpy': '1.13.3', 'scipy': '0.19.1', 'xarray': None, 'IPython': '6.1.0', 'sphinx': '1.6.3', 'patsy': '0.4.1',
+	 'dateutil': '2.6.1', 'pytz': '2017.2', 'blosc': None, 'bottleneck': '1.2.1', 'tables': '3.4.2', 'numexpr': '2.6.2', 'feather': None,
+	 'matplotlib': '2.1.0', 'openpyxl': '2.4.8', 'xlrd': '1.1.0', 'xlwt': '1.2.0', 'xlsxwriter': '1.0.2', 'lxml': '4.1.0', 'bs4': '4.6.0', 
+	'html5lib': '0.999999999', 'sqlalchemy': '1.1.13', 'pymysql': None, 'psycopg2': None,
+	 'jinja2': '2.9.6', 's3fs': None, 'pandas_gbq': None, 'pandas_datareader': None}}
+	None
+
+2. How to create a series from a list, numpy array and dict?
+
+
+	# Inputs
+	import numpy as np
+	mylist = list('abcedfghijklmnopqrstuvwxyz')
+	myarr = np.arange(26)
+	mydict = dict(zip(mylist, myarr))
+
+	# Solution
+	ser1 = pd.Series(mylist)
+	ser2 = pd.Series(myarr)
+	ser3 = pd.Series(mydict)
+	print(ser3.head())
+
+
+3. How to convert the index of a series into a column of a dataframe?
+
+	# Input
+	mylist = list('abcedfghijklmnopqrstuvwxyz')
+	myarr = np.arange(26)
+	mydict = dict(zip(mylist, myarr))
+	ser = pd.Series(mydict)
+
+	# Solution
+	df = ser.to_frame().reset_index()
+	print(df.head())
+
+
+
+4. How to combine many series to form a dataframe?
+
+	# Input
+	import numpy as np
+	ser1 = pd.Series(list('abcedfghijklmnopqrstuvwxyz'))
+	ser2 = pd.Series(np.arange(26))
+
+	# Solution 1
+	df = pd.concat([ser1, ser2], axis=1)
+
+	# Solution 2
+	df = pd.DataFrame({'col1': ser1, 'col2': ser2})
+	print(df.head())
+
+5. How to assign name to the series’ index?
+
+	# Input
+	ser = pd.Series(list('abcedfghijklmnopqrstuvwxyz'))
+
+	# Solution
+	ser.name = 'alphabets'
+	ser.head()
+
+6. How to get the items of series A not present in series B?
+
+	# Input
+	ser1 = pd.Series([1, 2, 3, 4, 5])
+	ser2 = pd.Series([4, 5, 6, 7, 8])
+
+	# Solution
+	ser1[~ser1.isin(ser2)]
+
+
+7. How to get the items not common to both series A and series B?
+
+	# Input
+	ser1 = pd.Series([1, 2, 3, 4, 5])
+	ser2 = pd.Series([4, 5, 6, 7, 8])
+
+	# Solution
+	ser_u = pd.Series(np.union1d(ser1, ser2))  # union
+	ser_i = pd.Series(np.intersect1d(ser1, ser2))  # intersect
+	ser_u[~ser_u.isin(ser_i)]
+
+8. How to get the minimum, 25th percentile, median, 75th, and max of a numeric series?
+
+	# Input
+	state = np.random.RandomState(100)
+	ser = pd.Series(state.normal(10, 5, 25))
+
+	# Solution
+	np.percentile(ser, q=[0, 25, 50, 75, 100])
+	array([  1.39267584,   6.49135133,  10.2578186 ,  13.06985067,  25.80920994])
+
+9. How to get frequency counts of unique items of a series?
+
+	# Input
+	ser = pd.Series(np.take(list('abcdefgh'), np.random.randint(8, size=30)))
+
+	# Solution
+	ser.value_counts()
+
+
+10. How to keep only top 2 most frequent values as it is and replace everything else as ‘Other’?
+
+	# Input
+	np.random.RandomState(100)
+	ser = pd.Series(np.random.randint(1, 5, [12]))
+
+	# Solution
+	print("Top 2 Freq:", ser.value_counts())
+	ser[~ser.isin(ser.value_counts().index[:2])] = 'Other'
+	ser
+
+
+11. How to extract items at given positions from a series
+
+	# Input
+	ser = pd.Series(list('abcdefghijklmnopqrstuvwxyz'))
+	pos = [0, 4, 8, 14, 20]
+
+	# Solution
+	ser.take(pos)
+
+12. How to calculate the number of characters in each word in a series?
+
+	# Input
+	ser = pd.Series(['how', 'to', 'kick', 'ass?'])
+
+	# Solution
+	ser.map(lambda x: len(x))
