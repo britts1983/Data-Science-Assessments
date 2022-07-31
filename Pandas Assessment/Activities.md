@@ -15,7 +15,7 @@
 
 
 
-# Please try to answer the question yourself, If you are stuck dont worry!!!  you are always free to take a look at the solution.
+# Please try to answer the question yourself, If you are stuck dont worry!!!  you are always free to take a look at the solutions.
 
 
 ## Enjoy !!!!!
