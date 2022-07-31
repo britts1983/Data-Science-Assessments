@@ -1,4 +1,4 @@
-# Pandas Assessment Questions.
+# Pandas Activities Questions.
 
 1. How to import pandas and check the version?
 2. How to create a series from a list, numpy array and dict?
