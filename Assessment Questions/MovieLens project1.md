@@ -1,4 +1,4 @@
-# Movielens Detetction
+# Movielens prediction
 
 # Problem Defnition
 
