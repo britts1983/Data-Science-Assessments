@@ -1,4 +1,4 @@
-How to change the order of columns of a dataframe?
+# How to change the order of columns of a dataframe?
 
 # Input
 df = pd.DataFrame(np.arange(20).reshape(-1, 5), columns=list('abcde'))
